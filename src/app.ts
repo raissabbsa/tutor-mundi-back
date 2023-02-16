@@ -9,4 +9,4 @@ server.use(cors())
 server.use(starRouter);
 
 const port = process.env.PORT;
-server.listen(4000, () => {console.log(`server runing on port ${port}`)});
+server.listen(port, () => {console.log(`server runing on port ${port}`)});
