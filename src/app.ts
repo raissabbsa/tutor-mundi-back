@@ -1,10 +1,12 @@
 import express from "express";
 import starRouter from "./routers/starsRouters.js";
+import cors from "cors";
 
 const server = express();
 server.use(express.json());
+server.use(cors())
 
 server.use(starRouter);
 
-
-server.listen(4000, () => {console.log("server runing on port 4000")});
+const port = process.env.PORT;
+server.listen(4000, () => {console.log(`server runing on port ${port}`)});
